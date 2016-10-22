@@ -18,30 +18,29 @@ public class DoSomeMath {
 		
 		//Get first value... assign to firstVal
 		System.out.println("Enter your first number: ");
-		String firstVal = getVal.nextLine();
+		String firstVal = getVal.nextLine().trim();
 		
 		//Get math operation and assign to mathOp
-				System.out.println("Enter math operation '+', '-', '*', '/', '%': ");
-				String mathOp = getVal.nextLine();
+				System.out.println("Enter math operation '+', '-', '*', '/', '%', '^': ");
+				String mathOp = getVal.nextLine().trim();
 				
 		
 		//Get second value... assign to secVal
 		System.out.println("Enter your second number: ");
-		String secVal = getVal.nextLine();
+		String secVal = getVal.nextLine().trim();
 		
 		
-		//Make firstVal and secVal to int and double
-		int fVi = Integer.parseInt(firstVal);
-		int sVi = Integer.parseInt(secVal);
+		//Make firstVal and secVal to double
 		double fVd = Double.parseDouble(firstVal);
 		double sVd = Double.parseDouble(secVal);
 		
 		//sum diff prod quot modulo
-		int sum = fVi + sVi;
-		int diff = fVi - sVi;
-		int prod = fVi * sVi;
+		double sum = fVd + sVd;
+		double diff = fVd - sVd;
+		double prod = fVd * sVd;
 		double quot = fVd / sVd;
 		double mod = fVd % sVd;
+		double exp = Math.pow(fVd, sVd);
 		
 		//if-statement to do mathOp
 		
@@ -59,6 +58,9 @@ public class DoSomeMath {
 			
 		}else if(mathOp.equals("%")){
 			System.out.println(firstVal + " % " + secVal + " = " + mod);
+			
+		}else if(mathOp.equals("^")){
+			System.out.println(firstVal + " ^ " + secVal + " = " + exp);
 		}
 		
 	}
