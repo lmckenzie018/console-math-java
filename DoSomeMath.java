@@ -30,17 +30,35 @@ public class DoSomeMath {
 		String secVal = getVal.nextLine();
 		
 		
-		//Make firstVal and secVal to int
+		//Make firstVal and secVal to int and double
 		int fVi = Integer.parseInt(firstVal);
 		int sVi = Integer.parseInt(secVal);
+		double fVd = Double.parseDouble(firstVal);
+		double sVd = Double.parseDouble(secVal);
 		
 		//sum diff prod quot modulo
 		int sum = fVi + sVi;
+		int diff = fVi - sVi;
+		int prod = fVi * sVi;
+		double quot = fVd / sVd;
+		double mod = fVd % sVd;
 		
 		//if-statement to do mathOp
 		
 		if (mathOp.equals("+")){
 			System.out.println(firstVal + " + " + secVal + " = " + sum);
+		
+		}else if(mathOp.equals("-")){
+			System.out.println(firstVal + " - " + secVal + " = " + diff);
+					
+		}else if(mathOp.equals("*")){
+			System.out.println(firstVal + " * " + secVal + " = " + prod);
+			
+		}else if(mathOp.equals("/")){
+			System.out.println(firstVal + " / " + secVal + " = " + quot);
+			
+		}else if(mathOp.equals("%")){
+			System.out.println(firstVal + " % " + secVal + " = " + mod);
 		}
 		
 	}
